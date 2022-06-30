@@ -1,0 +1,41 @@
+
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2022 The New York Times Company.  All Rights Reserved.",
+    "num_results": 20,
+    "results": [
+        {
+            "uri": "nyt://article/3dbd2430-f077-5282-8829-f36e15ba9b0e",
+            "url": "https://www.nytimes.com/2022/06/28/world/europe/ex-nazi-guard-convicted-germany.html",
+            "id": 100000008419675,
+            "asset_id": 100000008419675,
+            "source": "New York Times",
+            "published_date": "2022-06-28",
+            "updated": "2022-06-28 23:38:31",
+            "section": "World",
+            "subsection": "Europe",
+            "nytdsection": "world",
+            "adx_keywords": "Holocaust and the Nazi Era;Concentration Camps;World War II (1939-45);Sachsenhausen Concentration Camp;Germany",
+            "column": null,
+            "byline": "By Christopher F. Schuetze",
+            "type": "Article",
+            "title": "101-Year-Old Ex-Guard at Nazi Camp Is Convicted by German Court",
+            "abstract": "The man, identified only as Josef S. because of German privacy laws, was sentenced to five years in prison after being found guilty of being an accessory to more than 3,500 murders.",
+            "des_facet": [
+                "Holocaust and the Nazi Era",
+                "Concentration Camps",
+                "World War II (1939-45)"
+            ],
+            "org_facet": [
+                "Sachsenhausen Concentration Camp"
+            ],
+            "per_facet": [],
+            "geo_facet": [
+                "Germany"
+            ],
+            "media": [],
+            "eta_id": 0
+        }
+    ]
+}
+

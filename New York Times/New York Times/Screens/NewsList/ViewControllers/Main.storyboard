@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Listing View Controller-->
+        <scene sceneID="3DA-FO-gYP">
+            <objects>
+                <viewController storyboardIdentifier="NewsListingViewController" id="nEt-PX-mNE" customClass="NewsListingViewController" customModule="New_York_Times" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aZc-IC-R9W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBz-g0-AIZ">
+                                <rect key="frame" x="145.5" y="54" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K1y-gZ-e9B">
+                                <rect key="frame" x="0.0" y="95" width="414" height="801"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0GE-6l-lbs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0GE-6l-lbs" firstAttribute="trailing" secondItem="K1y-gZ-e9B" secondAttribute="trailing" id="Bgv-JQ-C8a"/>
+                            <constraint firstItem="CBz-g0-AIZ" firstAttribute="top" secondItem="0GE-6l-lbs" secondAttribute="top" constant="10" id="UgJ-qV-tWu"/>
+                            <constraint firstItem="K1y-gZ-e9B" firstAttribute="leading" secondItem="0GE-6l-lbs" secondAttribute="leading" id="a7G-3v-N0b"/>
+                            <constraint firstItem="K1y-gZ-e9B" firstAttribute="top" secondItem="CBz-g0-AIZ" secondAttribute="bottom" constant="20" id="ly3-gW-HjS"/>
+                            <constraint firstItem="CBz-g0-AIZ" firstAttribute="centerX" secondItem="0GE-6l-lbs" secondAttribute="centerX" id="pxP-hQ-fAw"/>
+                            <constraint firstAttribute="bottom" secondItem="K1y-gZ-e9B" secondAttribute="bottom" id="pza-bn-bIS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="articlesTableView" destination="K1y-gZ-e9B" id="U39-fF-Bb8"/>
+                        <outlet property="headerLabel" destination="CBz-g0-AIZ" id="qow-PA-pyE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSL-bY-eNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="153"/>
+        </scene>
+        <!--Article Detail View Controller-->
+        <scene sceneID="t7g-Gx-AnV">
+            <objects>
+                <viewController storyboardIdentifier="ArticleDetailViewController" id="CbZ-4e-6fb" customClass="ArticleDetailViewController" customModule="New_York_Times" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aL7-PA-9qn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zn5-7A-kHd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XM1-es-3Mk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zn5-7A-kHd" firstAttribute="leading" secondItem="XM1-es-3Mk" secondAttribute="leading" id="78h-XM-odd"/>
+                            <constraint firstItem="XM1-es-3Mk" firstAttribute="trailing" secondItem="Zn5-7A-kHd" secondAttribute="trailing" id="PXh-Ys-vib"/>
+                            <constraint firstItem="XM1-es-3Mk" firstAttribute="bottom" secondItem="Zn5-7A-kHd" secondAttribute="bottom" id="Vr4-HA-dfC"/>
+                            <constraint firstItem="Zn5-7A-kHd" firstAttribute="top" secondItem="XM1-es-3Mk" secondAttribute="top" id="nXR-3P-DjF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webKit" destination="Zn5-7A-kHd" id="KPq-e3-OGX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mqi-aV-jdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="153"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
