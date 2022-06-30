@@ -48,8 +48,8 @@ extension ArticleDetailViewController {
     }
     
     func bindView(){
-        viewModel.showActivity.bind { (value) in
-            self.showActivityIndicator(show: value)
+        viewModel.showActivity.bind {[weak self] (value) in
+            self?.showActivityIndicator(show: value)
         }
     }
 }
