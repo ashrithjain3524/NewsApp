@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NewsList: Codable {
+struct NewsList: Codable {
     
     var status:String?
     var copyright:String?
@@ -16,7 +16,7 @@ class NewsList: Codable {
     
 }
 
-class ArticleResult:Codable{
+struct ArticleResult:Codable{
     var url:String?
     var adx_keywords:String?
     var column:String?
@@ -32,7 +32,7 @@ class ArticleResult:Codable{
     var media :[Media]?
 }
 
-class Media: Codable {
+struct Media: Codable {
     var type:String?
     var subtype:String?
     var caption:String?
@@ -47,7 +47,7 @@ class Media: Codable {
     }
 }
 
-class MediaMetaData: Codable {
+struct MediaMetaData: Codable {
     var url:String?
     var format:String?
     var height:Int?

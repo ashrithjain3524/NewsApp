@@ -40,8 +40,8 @@ extension NewsListingViewController{
     }
     
     func bindViews(){
-        viewModel.showActivity.bind { (value) in
-            // self.showActivityIndicator(show: value)
+        viewModel.showActivity.bind {[weak self] (value) in
+            self?.showActivityIndicator(show: value)
         }
         viewModel.reloadTable.bind { [weak self] (value) in
             if(value){
